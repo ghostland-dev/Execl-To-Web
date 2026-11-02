@@ -1,30 +1,40 @@
-# Refineryai clone
+# Excel to Web
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Turns spreadsheets and documents into working web applications.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sumamoymoy-gmailcoms-projects/v0-refineryai-clone)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/JweII29uXp5)
+## Features
 
-## Overview
+- Document analysis API
+- App generation endpoint
+- Stripe checkout integration
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Tech Stack
 
-## Deployment
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui (Radix UI)
+- Stripe
+- Google Gemini API
 
-Your project is live at:
+## Getting Started
 
-**[https://vercel.com/sumamoymoy-gmailcoms-projects/v0-refineryai-clone](https://vercel.com/sumamoymoy-gmailcoms-projects/v0-refineryai-clone)**
+```bash
+git clone https://github.com/ghostland-dev/excel-to-web-ai.git
+cd excel-to-web-ai
+npm install
+npm run dev
+```
 
-## Build your app
+Other scripts:
 
-Continue building your app on:
+- `npm run build`: next build
+- `npm run lint`: next lint
 
-**[https://v0.dev/chat/projects/JweII29uXp5](https://v0.dev/chat/projects/JweII29uXp5)**
+## Author
 
-## How It Works
+**Ismail.M**, Software Engineer & DevOps
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- GitHub: [@ghostland-dev](https://github.com/ghostland-dev)
+- Website: [ismail-mouyahada.com](https://www.ismail-mouyahada.com)
