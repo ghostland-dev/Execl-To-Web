@@ -32,6 +32,19 @@ Other scripts:
 - `npm run build`: next build
 - `npm run lint`: next lint
 
+## Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fghostland-dev%2Fexcel-to-web-ai)
+
+Click the button to deploy your own copy on Vercel in one step.
+
+Set these environment variables in the Vercel project settings (see `.env.example`):
+
+- `GEMINI_API_KEY`
+- `NEXT_PUBLIC_URL`
+- `STRIPE_SECRET_KEY`
+- `STRIPE_WEBHOOK_SECRET`
+
 ## Author
 
 **Ismail.M**, Software Engineer & DevOps
