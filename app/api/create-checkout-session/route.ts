@@ -1,9 +1,11 @@
 import { type NextRequest, NextResponse } from "next/server"
 import Stripe from "stripe"
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2024-06-20",
-})
+// Created per request so the build does not require STRIPE_SECRET_KEY
+const getStripe = () =>
+  new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
+    apiVersion: "2024-06-20",
+  })
 
 export async function POST(request: NextRequest) {
   try {
@@ -34,7 +36,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create Stripe checkout session
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
         {
@@ -88,7 +90,7 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: "No signature provided" }, { status: 400 })
     }
 
-    const event = stripe.webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET!)
+    const event = getStripe().webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET!)
 
     switch (event.type) {
       case "checkout.session.completed":
